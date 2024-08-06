@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add or Remove Input</title>
+    <style>
+      ul {
+        padding: 0;
+        list-style: none;
+        li {
+          margin: 5px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="remove()">-</button>
+    <button onclick="add()">+</button>
+    <ul id="inps"></ul>
+    <script>
+      const inps = document.getElementById("inps");
+      let arr = 0;
+
+      function add() {
+        arr++;
+        show();
+      }
+
+      function remove() {
+        arr--
+        show()
+      }
+
+      function show() {
+        let kod = "";
+        for (let i = 0; i < arr; i++) {
+          kod += `<li><input type="text" value="Raya"/></li>`;
+        }
+        inps.innerHTML = kod;
+      }
+
+    </script>
+  </body>
+</html>
